@@ -1,32 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const gravatar = {
+  baseUrl: 'https://gravatar.com/avatar',
+  hash: '42eb8a23795977bb28dd147781e05ca2cf30c08b4fd387a12ab64411fe3b835d',
+  size: '1024',
+};
+
+function buildGravatar(): string {
+  const { baseUrl, hash, size } = gravatar;
+  return `${baseUrl}/${hash}?s=${size}`;
+}
+
+const gravatarUrl = buildGravatar();
 ---
 
 <Layout title="Armin Ganic">
   <div class="hero">
+    <img class="image" src={gravatarUrl} alt="">
     <span>Hi, my name is</span>
-    <h1>Armin Ganic</h1>
+    <h1 class="heading">Armin Ganic</h1>
   </div>
 </Layout>
 
 <style>
   .hero {
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
     max-width: 800px;
-    margin: 4rem auto;
-    padding: 2rem;
+    padding-block: 4rem;
+    padding-inline: 16px;
   }
 
-  h1 {
+  .image {
+    border-radius: 9999px;
+    margin-block-end: 24px;
+    max-width: 200px;
+    transition: scale 150ms ease-in-out;
+  }
+
+  @media (hover: hover) {
+    .image:hover {
+      scale: 1.025;
+    }
+  }
+  
+  .heading {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #222;
-  }
-
-  .tagline {
-    font-size: 1.25rem;
-    color: #666;
-    margin-bottom: 2rem;
-    font-weight: 300;
   }
 </style>
