@@ -9,9 +9,7 @@ interface Props {
 const { id, label, command, commandfor: commandFor } = Astro.props;
 ---
 
-<button id={id} class="button button--label" command={command} commandfor={commandFor}
-  >{label}</button
->
+<button id={id} class="button" command={command} commandfor={commandFor}>{label}</button>
 
 <style>
   .button {
@@ -19,8 +17,5 @@ const { id, label, command, commandfor: commandFor } = Astro.props;
     border: none;
     color: var(--color);
     font-size: 1rem;
-  }
-
-  .button--label {
   }
 </style>
