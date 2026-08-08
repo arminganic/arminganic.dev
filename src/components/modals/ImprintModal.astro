@@ -1,0 +1,41 @@
+---
+import Modal from '../Modal.astro';
+
+export const IMPRINT_MODAL_ID = 'modal-imprint';
+---
+
+<Modal id={IMPRINT_MODAL_ID} title="Impressum">
+  <p class="paragraph">
+    Dieses Dokument ist nach österreichischem Recht erforderlich. Es enthält relevante Informationen
+    über mich, den Inhaber dieser Website.
+  </p>
+
+  <p class="paragraph">
+    Armin Ganic
+    <br />
+    Ilse-Buck-Straße 28/28
+    <br />
+    1220 Wien, Österreich
+  </p>
+
+  <p class="paragraph">E-Mail: hello@arminganic.dev</p>
+
+  <p class="paragraph">
+    UID-Nummer: ATU83346229
+    <br />
+    Mitglied der WKO, WKNÖ, Sparte Information und Consulting
+  </p>
+
+  <p class="paragraph">
+    Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu
+    richten: <a href="http://ec.europa.eu/odr" target="_blank" rel="noopener noreferrer"
+      >http://ec.europa.eu/odr</a
+    >. Sie können allfällige Beschwerde auch an die oben angegebene E-Mail-Adresse richten.
+  </p>
+</Modal>
+
+<style>
+  .paragraph:not(:first-child) {
+    margin-block-start: 1rem;
+  }
+</style>

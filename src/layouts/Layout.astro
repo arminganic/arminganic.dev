@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Button from '../components/Button.astro';
+import ImprintModal, { IMPRINT_MODAL_ID } from '../components/modals/ImprintModal.astro';
 
 interface Props {
   title: string;
@@ -8,7 +10,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,8 +18,33 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main>
+    <main class="main">
       <slot />
     </main>
+    <footer class="footer">
+      <section class="container">
+        <p>© 2026 Armin Ganic. All rights reserved.</p>
+        <Button
+          id="btn-imprint"
+          label="Impressum"
+          command="show-modal"
+          commandfor={IMPRINT_MODAL_ID}
+        />
+        <ImprintModal />
+      </section>
+    </footer>
   </body>
 </html>
+
+<style>
+  .main {
+    min-height: 100vh;
+    padding-inline: 1rem;
+  }
+
+  .footer {
+    background-color: black;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+  }
+</style>

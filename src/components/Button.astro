@@ -1,0 +1,26 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  command?: string;
+  commandfor?: string;
+}
+
+const { id, label, command, commandfor: commandFor } = Astro.props;
+---
+
+<button id={id} class="button button--label" command={command} commandfor={commandFor}
+  >{label}</button
+>
+
+<style>
+  .button {
+    background-color: transparent;
+    border: none;
+    color: var(--color);
+    font-size: 1rem;
+  }
+
+  .button--label {
+  }
+</style>
