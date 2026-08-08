@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<dialog class="modal" id={id}>
+  <header class="modal-header">
+    <h1>{title}</h1>
+    <button commandfor={id} command="close">Schließen</button>
+  </header>
+  <section class="modal-body">
+    <slot />
+  </section>
+</dialog>
+
+<!--
+  Styles for this component live in src/styles/modal.css rather than a scoped
+  <style> block. Some modals are fetched as a lazy-loaded HTML fragment, and
+  Astro drops scoped styles from page "partial" output.
+-->

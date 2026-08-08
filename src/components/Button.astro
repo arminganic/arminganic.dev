@@ -1,15 +1,31 @@
 ---
-interface Props {
-  id: string;
-  label: string;
-  command?: string;
-  commandfor?: string;
+import type { JSX } from 'astro/jsx-runtime';
+
+interface AriaAttributes {
+  haspopup?: JSX.AriaAttributes['aria-haspopup'];
 }
 
-const { id, label, command, commandfor: commandFor } = Astro.props;
+interface Props {
+  id: string;
+  aria?: AriaAttributes;
+  command?: string;
+  commandfor?: string;
+  label: string;
+}
+
+const { id, aria, command, commandfor, label } = Astro.props;
 ---
 
-<button id={id} class="button" command={command} commandfor={commandFor}>{label}</button>
+<button
+  id={id}
+  class="button"
+  aria-haspopup={aria?.haspopup}
+  command={command}
+  commandfor={commandfor}
+  data-loading="false"
+>
+  {label}
+</button>
 
 <style>
   .button {
@@ -17,5 +33,10 @@ const { id, label, command, commandfor: commandFor } = Astro.props;
     border: none;
     color: var(--color);
     font-size: 1rem;
+  }
+
+  .button[data-loading='true'] {
+    cursor: progress;
+    opacity: 0.6;
   }
 </style>
