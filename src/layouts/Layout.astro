@@ -102,20 +102,19 @@ const { title } = Astro.props;
 <style>
   .main {
     min-height: 95vh;
-    padding-inline: 1rem;
   }
 
   .footer {
     background-color: var(--pf-bg-primary);
     border-block-start: 1px solid var(--pf-border-default);
-    padding-block: 4rem;
-    padding-inline: 1rem;
   }
 
   .footer-content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding-block: 4rem;
   }
 
   .footer-legal {
@@ -136,18 +135,10 @@ const { title } = Astro.props;
   }
 
   @media screen and (width >= 700px) {
-    .main {
-      padding-inline: 2rem;
-    }
-
-    .footer {
-      padding-block: 6rem;
-      padding-inline: 2rem;
-    }
-
     .footer-content {
       flex-direction: row;
       justify-content: space-between;
+      padding-block: 6rem;
     }
   }
 </style>

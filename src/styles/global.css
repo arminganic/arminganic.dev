@@ -1,10 +1,10 @@
 @font-face {
+  font-display: swap;
   font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500, 600;
   src: url('/fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf')
     format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 :root {
@@ -27,6 +27,12 @@
   --pf-color-ink-900: #14181c;
 
   --pf-font-family-primary: 'Google Sans', 'Inter', -apple-system, Roboto, Arial, sans-serif;
+
+  --pf-font-size-body: clamp(1rem, 0.94rem + 0.28vw, 1.125rem);
+  --pf-font-size-caption: clamp(0.8125rem, 0.8rem + 0.06vw, 0.875rem);
+  --pf-font-size-h1: clamp(2.25rem, 1.7rem + 2.5vw, 3.5rem);
+  --pf-font-size-h2: clamp(1.75rem, 1.45rem + 1.4vw, 2.25rem);
+  --pf-font-size-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
 }
 
 :root {
@@ -71,13 +77,22 @@ body {
   background-color: var(--pf-bg-primary);
   color: var(--pf-text-primary);
   font-family: var(--pf-font-family-primary);
+  font-size: var(--pf-font-size-body);
+  line-height: 1.5;
 
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
 }
 
+h1 {
+  font-size: var(--pf-font-size-h1);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1120px;
+  padding-inline: 2rem;
 }
