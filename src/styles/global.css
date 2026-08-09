@@ -8,7 +8,7 @@
 }
 
 :root {
-  --backdrop-color: rgba(0 0 0 / 0.1);
+  --backdrop-color: rgba(0 0 0 / 0.2);
   --background-color: rgb(255 255 255);
   --color: rgb(31, 30, 36);
 
@@ -32,10 +32,6 @@ body {
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
-}
-
-body:has(dialog[open]) {
-  overflow: hidden;
 }
 
 .container {
