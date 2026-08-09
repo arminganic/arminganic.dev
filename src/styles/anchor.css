@@ -1,3 +1,4 @@
 a {
-  color: var(--anchor-color, var(--color));
+  color: var(--anchor-color, var(--pf-accent));
+  text-decoration: underline;
 }

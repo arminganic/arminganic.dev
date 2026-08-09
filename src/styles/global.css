@@ -8,14 +8,52 @@
 }
 
 :root {
+  --pf-color-black-700: #2a2f37;
+  --pf-color-black-800: #161b22;
+  --pf-color-black-900: #0d1117;
+
+  --pf-color-gray-400: #9ba3ae;
+
+  --pf-color-white-000: #ffffff;
+  --pf-color-white-100: #f0f2f5;
+
+  --pf-color-blue-500: #4f8eff;
+  --pf-color-blue-700: #2f5fd1;
+
+  --pf-color-cream-100: #f7f5f2;
+  --pf-color-cream-300: #ddd9d3;
+
+  --pf-color-ink-600: #5c6570;
+  --pf-color-ink-900: #14181c;
+
+  --pf-font-family-primary: 'Google Sans', 'Inter', -apple-system, Roboto, Arial, sans-serif;
+}
+
+:root {
+  --pf-bg-primary: var(--pf-color-cream-100);
+  --pf-bg-secondary: var(--pf-color-white-000);
+
+  --pf-text-primary: var(--pf-color-ink-900);
+  --pf-text-secondary: var(--pf-color-ink-600);
+  --pf-text-on-accent: var(--pf-color-white-000);
+
+  --pf-accent: var(--pf-color-blue-700);
+  --pf-accent-strong: var(--pf-color-blue-700);
+
   --backdrop-color: rgba(0 0 0 / 0.2);
-  --background-color: rgb(255 255 255);
-  --color: rgb(31, 30, 36);
 
   @media (prefers-color-scheme: dark) {
+    --pf-bg-primary: var(--pf-color-black-900);
+    --pf-bg-secondary: var(--pf-color-black-800);
+
+    --pf-text-primary: var(--pf-color-white-100);
+    --pf-text-secondary: var(--pf-color-gray-400);
+    --pf-text-on-accent: var(--pf-color-white-000);
+
+    --pf-accent: var(--pf-color-blue-500);
+    --pf-accent-strong: var(--pf-color-blue-700);
+
     --backdrop-color: rgba(255 255 255 / 0.1);
-    --background-color: rgb(31 30 36);
-    --color: rgb(255 255 255);
   }
 }
 
@@ -26,9 +64,10 @@
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--color);
-  font-family: 'Google Sans', sans-serif;
+  background-color: var(--pf-bg-primary);
+  color: var(--pf-text-primary);
+  font-family: var(--pf-font-family-primary);
+
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;

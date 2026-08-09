@@ -1,11 +1,11 @@
 .modal {
   --modal-margin-block-start: 4rem;
   --modal-border-radius: 12px;
-  background-color: var(--background-color);
+  background-color: var(--pf-bg-primary);
   border-start-end-radius: var(--modal-border-radius);
   border-start-start-radius: var(--modal-border-radius);
   border: none;
-  color: var(--color);
+  color: var(--pf-text-primary);
   inset: auto 0 0 0;
   margin-block-start: var(--modal-margin-block-start);
   max-height: calc(100vh - var(--modal-margin-block-start));

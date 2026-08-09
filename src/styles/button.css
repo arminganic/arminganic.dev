@@ -1,7 +1,12 @@
 button {
   background-color: transparent;
   border: none;
-  color: var(--button-color, var(--color));
+  color: var(--button-color, var(--pf-text-primary));
   cursor: pointer;
   font-size: 1rem;
+}
+
+button[data-variant='anchor'] {
+  color: var(--anchor-color, var(--pf-text-pf-accent));
+  text-decoration: underline;
 }
