@@ -110,7 +110,6 @@ const { title } = Astro.props;
   }
 
   .footer-content {
-    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -136,6 +135,7 @@ const { title } = Astro.props;
 
   @media screen and (width >= 700px) {
     .footer-content {
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
       padding-block: 6rem;
