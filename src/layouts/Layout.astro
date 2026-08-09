@@ -106,8 +106,8 @@ const { title } = Astro.props;
   }
 
   .footer {
-    background-color: black;
-    color: white;
+    background-color: var(--pf-bg-primary);
+    border-block-start: 1px solid var(--pf-border-default);
     padding-block: 4rem;
     padding-inline: 1rem;
   }
@@ -126,13 +126,13 @@ const { title } = Astro.props;
   }
 
   .footer-social {
-    --anchor-color: var(--pf-color-white-100);
+    --anchor-color: var(--pf-text-primary);
     display: flex;
     gap: 1rem;
   }
 
   #btn-imprint {
-    --button-color: var(--pf-color-white-100);
+    --button-color: var(--pf-text-primary);
   }
 
   @media screen and (width >= 700px) {
