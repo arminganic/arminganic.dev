@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Impressum">
+  <section class="imprint-content container">
+    <hgroup class="hgroup">
+      <a href="/">← Zurück zur Startseite</a>
+      <h1>Impressum</h1>
+    </hgroup>
+
+    <p class="muted">
+      Informationspflicht laut § 5 E-Commerce-Gesetz (ECG) und Offenlegungspflicht laut § 25
+      Mediengesetz.
+    </p>
+
+    <p>
+      Armin Ganic, MSc
+      <br />
+      Ilse-Buck-Straße 28/28
+      <br />
+      1220 Wien, Österreich
+    </p>
+
+    <p>
+      E-Mail:
+      <br />
+      <a href="mailto:hello@arminganic.dev">hello@arminganic.dev</a>
+    </p>
+
+    <p>
+      Unternehmensgegenstand:
+      <br />
+      <span class="muted">
+        Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik
+      </span>
+    </p>
+    <p>
+      UID-Nummer:
+      <br />
+      <span class="muted">ATU83346229</span>
+    </p>
+
+    <p>
+      Mitgliedschaft:
+      <br />
+      <span class="muted">
+        Wirtschaftskammer Wien, Fachgruppe UBIT (Unternehmensberatung, Buchhaltung und
+        Informationstechnologie)
+      </span>
+    </p>
+
+    <p>
+      Aufsichtsbehörde/Gewerbebehörde:
+      <br />
+      <span class="muted"> Magistratisches Bezirksamt für den 22. Bezirk </span>
+    </p>
+
+    <p>
+      Anwendbare Rechtsvorschriften:
+      <br />
+      <span class="muted">
+        Gewerbeordnung (GewO), abrufbar unter <a
+          href="https://www.ris.bka.gv.at"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          www.ris.bka.gv.at
+        </a>
+      </span>
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .imprint-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 6rem;
+  }
+
+  .hgroup {
+    margin-block-end: 1rem;
+  }
+
+  .imprint-content p {
+    max-width: 56ch;
+  }
+
+  .muted {
+    color: var(--pf-text-secondary);
+  }
+</style>
