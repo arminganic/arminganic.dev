@@ -1,0 +1,140 @@
+---
+import Marquee from '../components/Marquee.astro';
+
+const icons = [
+  {
+    title: 'Nx',
+    src: '/icons/nx-mono.svg',
+  },
+  {
+    title: 'Angular',
+    src: '/icons/angular-mono.svg',
+  },
+  {
+    title: 'NgRx',
+    src: '/icons/ngrx-mono.svg',
+  },
+  {
+    title: 'Storybook',
+    src: '/icons/storybook-mono.svg',
+  },
+  {
+    title: 'Spring',
+    src: '/icons/spring-mono.svg',
+  },
+  {
+    title: 'Spring Boot',
+    src: '/icons/spring-boot-mono.svg',
+  },
+  {
+    title: 'PostgreSQL',
+    src: '/icons/postgresql-mono.svg',
+  },
+  {
+    title: 'Storyblok',
+    src: '/icons/storyblok-mono.svg',
+  },
+  {
+    title: 'Docker',
+    src: '/icons/docker-mono.svg',
+  },
+];
+---
+
+<section class="technologies">
+  <div class="technologies-content container">
+    <hgroup class="hgroup">
+      <h2>Meine Technologien</h2>
+      <p class="description">
+        Ein Auszug meiner bevorzugten Tools. Ich arbeite technologieübergreifend und setze genau die
+        Werkzeuge ein, die am besten zu deinen Anforderungen und deiner Infrastruktur passen –
+        pragmatisch und lösungsorientiert.
+      </p>
+    </hgroup>
+    <Marquee>
+      {
+        icons.map((icon) => (
+          <article class="technology">
+            <span class="icon" style={`--icon-url: url('${icon.src}');`} />
+            <span>{icon.title}</span>
+          </article>
+        ))
+      }
+    </Marquee>
+  </div>
+</section>
+
+<style>
+  .technologies {
+    background-color: var(--pf-bg-secondary);
+  }
+
+  .technologies-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .description {
+    color: var(--pf-text-secondary);
+  }
+
+  .technology {
+    align-items: center;
+    aspect-ratio: 1;
+    color: var(--pf-text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    width: 12ch;
+  }
+
+  .icon {
+    background-color: var(--pf-text-secondary);
+    display: inline-block;
+    mask-image: var(--icon-url);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  @media screen and (width < 768px) {
+    .technologies-content {
+      gap: 2rem;
+      padding-block: 3rem;
+    }
+
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .technologies-content {
+      gap: 3rem;
+      padding-block: 6rem;
+    }
+
+    .hgroup {
+      text-align: center;
+    }
+
+    .description {
+      margin-inline: auto;
+      max-width: 56ch;
+    }
+
+    .icon {
+      height: 48px;
+      width: 48px;
+    }
+  }
+</style>

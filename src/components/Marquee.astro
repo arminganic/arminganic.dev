@@ -1,0 +1,52 @@
+<div class="marquee">
+  {
+    [0, 1].map((index) => (
+      <div class="marquee-track" aria-hidden={!index ? undefined : 'true'}>
+        <slot />
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    gap: var(--marquee-gap);
+  }
+
+  .marquee-track {
+    animation: scroll 25s linear infinite;
+    display: flex;
+    gap: var(--marquee-gap);
+  }
+
+  @media screen and (width < 768px) {
+    .marquee {
+      --marquee-gap: 0rem;
+      margin-inline: -2rem;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .marquee {
+      --marquee-gap: 1rem;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+</style>

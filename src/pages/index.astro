@@ -1,80 +1,10 @@
 ---
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-
-const gravatar = {
-  baseUrl: 'https://gravatar.com/avatar',
-  hash: '42eb8a23795977bb28dd147781e05ca2cf30c08b4fd387a12ab64411fe3b835d',
-  size: '1024',
-};
-
-function buildGravatar(): string {
-  const { baseUrl, hash, size } = gravatar;
-  return `${baseUrl}/${hash}?s=${size}`;
-}
-
-const gravatarUrl = buildGravatar();
+import Technologies from '../components/Technologies.astro';
 ---
 
 <Layout title="Armin Ganic">
   <Hero />
+  <Technologies />
 </Layout>
-
-<style>
-  .hero {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-    max-width: 800px;
-    padding-block: 4rem;
-    padding-inline: 16px;
-  }
-
-  .image-container {
-    border-radius: 9999px;
-    margin-block-end: 24px;
-    max-height: 200px;
-    max-width: 200px;
-    overflow: hidden;
-  }
-
-  .image {
-    height: 100%;
-    transition-duration: 300ms;
-    transition-property: scale;
-    transition-timing-function: ease-in-out;
-    width: 100%;
-  }
-
-  .pre-heading {
-    opacity: 0.8;
-  }
-
-  .heading {
-    font-size: 2.5rem;
-  }
-
-  .links {
-    display: flex;
-    gap: 16px;
-    margin-block-start: 40px;
-  }
-
-  .link {
-    opacity: 0.8;
-    transition-duration: 100ms;
-    transition-property: opacity;
-    transition-timing-function: ease-in-out;
-  }
-
-  @media (hover: hover) {
-    .image:hover {
-      scale: 1.03;
-    }
-
-    .link:hover {
-      opacity: 1;
-    }
-  }
-</style>
