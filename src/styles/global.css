@@ -33,6 +33,7 @@
   --pf-font-size-h1: clamp(2.25rem, 1.7rem + 2.5vw, 3.5rem);
   --pf-font-size-h2: clamp(1.75rem, 1.45rem + 1.4vw, 2.25rem);
   --pf-font-size-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --pf-font-size-h4: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
 }
 
 :root {

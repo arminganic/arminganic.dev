@@ -8,7 +8,9 @@
     </p>
   </hgroup>
   <div class="action">
-    <a class="button" data-variant="primary" href="mailto:hello@arminganic.dev">Sag Hallo</a>
+    <a class="button" data-size="large" data-variant="primary" href="mailto:hello@arminganic.dev">
+      Sag Hallo
+    </a>
     <span class="action-info">Ich antworte innerhalb von 24 Stunden, versprochen.</span>
   </div>
 </section>
@@ -38,9 +40,6 @@
   }
 
   .button {
-    font-size: 1.5rem;
-    padding-block: 1.5rem;
-    padding-inline: 3rem;
     transition-property: transform;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
@@ -48,11 +47,10 @@
 
   .action-info {
     color: var(--pf-text-secondary);
-    font-size: 0.875rem;
+    font-size: var(--pf-font-size-caption);
   }
 
   .button:hover {
-    opacity: 1;
     transform: scale(1.05) rotate(-5deg);
   }
 

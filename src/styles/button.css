@@ -1,13 +1,11 @@
-button,
 .button {
   background-color: transparent;
   border: none;
   color: var(--button-color, var(--pf-text-primary));
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--pf-font-size-body);
 }
 
-button[data-variant='primary'],
 .button[data-variant='primary'] {
   background-color: var(--pf-accent);
   border-radius: 9999px;
@@ -16,8 +14,15 @@ button[data-variant='primary'],
   text-decoration: none;
 }
 
-button[data-variant='anchor'],
-.button[data-variant='anchor'] {
-  color: var(--anchor-color, var(--pf-text-pf-accent));
-  text-decoration: underline;
+.button[data-size='large'] {
+  font-size: var(--pf-font-size-h4);
+  padding-block: 1.5rem;
+  padding-inline: 3rem;
+}
+
+@media screen and (width < 768px) {
+  .button[data-size='large'] {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
 }
