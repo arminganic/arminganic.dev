@@ -1,0 +1,72 @@
+<section class="contact container">
+  <hgroup class="hgroup">
+    <h2>Lass uns sprechen</h2>
+    <p class="description">
+      Du planst ein neues digitales Produkt, brauchst Unterstützung bei einer bestehenden Anwendung
+      oder möchtest einfach nur technisch beraten werden? Schreib mir eine kurze Nachricht per
+      E-Mail.
+    </p>
+  </hgroup>
+  <div class="action">
+    <a class="button" data-variant="primary" href="mailto:hello@arminganic.dev">Sag Hallo</a>
+    <span class="action-info">Ich antworte innerhalb von 24 Stunden, versprochen.</span>
+  </div>
+</section>
+
+<style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 56ch;
+  }
+
+  .description {
+    color: var(--pf-text-secondary);
+  }
+
+  .action {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding-block: 1.5rem;
+    padding-inline: 3rem;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .action-info {
+    color: var(--pf-text-secondary);
+    font-size: 0.875rem;
+  }
+
+  .button:hover {
+    opacity: 1;
+    transform: scale(1.05) rotate(-5deg);
+  }
+
+  @media screen and (width < 768px) {
+    .contact {
+      gap: 2rem;
+      padding-block: 3rem;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .contact {
+      gap: 3rem;
+      padding-block: 6rem;
+    }
+  }
+</style>

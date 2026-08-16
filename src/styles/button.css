@@ -1,4 +1,5 @@
-button {
+button,
+.button {
   background-color: transparent;
   border: none;
   color: var(--button-color, var(--pf-text-primary));
@@ -6,7 +7,17 @@ button {
   font-size: 1rem;
 }
 
-button[data-variant='anchor'] {
+button[data-variant='primary'],
+.button[data-variant='primary'] {
+  background-color: var(--pf-accent);
+  border-radius: 9999px;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  text-decoration: none;
+}
+
+button[data-variant='anchor'],
+.button[data-variant='anchor'] {
   color: var(--anchor-color, var(--pf-text-pf-accent));
   text-decoration: underline;
 }
