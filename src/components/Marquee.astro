@@ -17,8 +17,12 @@
 
   .marquee-track {
     animation: scroll 25s linear infinite;
+    backface-visibility: hidden;
     display: flex;
+    flex-shrink: 0;
     gap: var(--marquee-gap);
+    width: max-content;
+    will-change: transform;
   }
 
   @media screen and (width < 768px) {
